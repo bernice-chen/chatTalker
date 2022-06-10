@@ -1,0 +1,60 @@
+//container
+@mixin ctm-d{
+    max-width: 1088px;
+    width: 79.648609%;
+    @include mgc;
+}
+@mixin ctm-m{
+    max-width: 335px;
+    width: 89.333333%;
+    @include mgc;
+}
+
+//center
+@mixin mgc{
+    margin: 0 auto;
+}
+@mixin fxc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @content;
+}
+
+//btn
+@mixin btn-r{
+    font-size: $fz-3;
+    font-weight: $fw-r;
+    line-height: $lh-1;
+    padding: $sz-1 $sz-10;
+    border: none;
+    border-radius: $br-2;
+    background-color: $red-color;
+    cursor: pointer;
+}
+@mixin btn-b{
+    font-size: $fz-4;
+    color: $white-color;
+    line-height: $lh-1;
+    padding: $sz-3 $sz-10;
+    border: none;
+    border-radius: $br-3;
+    background-color: $main-color;
+    cursor: pointer;
+}
+@mixin btn-border-md-b{
+    font-family: $fzs-2;
+    font-size: $fz-3;
+    color: $main-color;
+    white-space: nowrap;
+    line-height: $lh-1;
+    padding: $sz-1 $sz-4;
+    border: 1px solid $main-color;
+    border-radius: $br-3;
+    background-color: $white-color;
+    cursor: pointer;
+}
+@mixin btn-border-lg-b{
+    font-size: $fz-4;
+    padding: $sz-3 $sz-10;
+}

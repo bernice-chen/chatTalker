@@ -1,0 +1,451 @@
+//var
+@import "reset";
+@import "var";
+
+// mixin
+@import "mixin";
+
+//base
+@import "base";
+.page{
+    margin: 0 auto;
+}
+header{
+    height: 100vh;
+    position: relative;
+    &::before{
+        content: "";
+        width: 100%;
+        border-bottom: 2px solid $yellow-color;
+        position: absolute;
+        left: 0;
+        top: $sz-14;
+    }
+    .nav{
+        @include fxc;
+        padding: $sz-4 0;
+        .logo{
+            width: 13.1rem;
+            cursor: pointer;
+        }
+        .btn-r{
+            @include btn-r();
+        }
+    }
+    .banner{
+        .txt{
+            margin: $sz-10 0;
+        }
+        h3{
+            font-size: $fz-3;
+            color: $main-color;
+            margin-bottom: $sz-1;
+        }
+        h2{
+            font-size: $fz-8;
+            margin-bottom: $sz-4;
+        }
+        p{
+            font-size: $fz-3;
+            font-weight: $fw-r;
+        }
+        .pic{
+            &::after{
+                content: "";
+                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg") no-repeat;
+                width: 33.4rem;
+                height: 24.5rem;
+                position: absolute;
+                bottom: 3.2rem;
+                background-size: cover;
+                z-index: -1;
+            }
+            .home{
+                width: 90.746268%;
+                margin-left: $sz-4;
+            }
+        }
+    }
+    .topscroll{
+        bottom: $sz-4;
+        right: $sz-4;
+    }
+}
+.link{
+    margin: $sz-13 0;
+    position: relative;
+    &::after{
+        content: "";
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat;
+        background-size: cover;
+        background-position: right;
+        width: 4.9rem;
+        height: 12.6rem;
+        position: absolute;
+        top: $sz-3;
+        z-index: -1;
+    }
+    h2{
+        margin-bottom: $sz-10;
+    }
+    .link-card li{
+        padding: 0 4.75rem;
+        margin-bottom: $sz-7;
+    }
+    img{
+        width: 6rem;
+        @include mgc;
+        margin-bottom: $sz-4;
+    }
+    .txt{
+        h3{
+            font-size: $fz-4;
+            margin-bottom: $sz-4;
+        }
+        p{
+            font-size: $fz-3;
+            font-weight: $fw-r;
+            color: $gray-color;
+        }
+    }
+}
+.service{
+    position: relative;
+    margin-bottom: $sz-13;
+    &::after{
+        content: "";
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat;
+        background-size: cover;
+        width: 8.8rem;
+        height: 13.5rem;
+        position: absolute;
+        right: 0;
+        bottom: -$sz-10;
+        z-index: -1;
+    }
+    .txt{
+        h2{
+            margin-bottom: $sz-4;
+        }
+        p{
+            font-weight: $fw-r;
+            margin-bottom: $sz-7;
+        }
+    }
+    li{
+        width: 26rem;
+        @include mgc;
+        border-radius: $br-1;
+        margin-bottom: $sz-7;
+        img{
+            border-radius: $br-1 $br-1 0 0;
+        }
+        h3{
+            font-size: $fz-3;
+            color: $main-color;
+            padding: $sz-4 0;
+        }
+        p{
+            font-size: $fz-3;
+            font-weight: $fw-r;
+            padding: 0 $sz-4 $sz-7;
+        }
+    }
+}
+.price{
+    margin-bottom: $sz-13;
+    .txt{
+        margin-bottom: $sz-10;
+        p{
+            font-weight: $fw-r;
+            padding: $sz-4 0;
+        }
+        button{
+            @include btn-b;
+        }
+    }
+    .pic{
+        width: 23rem;
+        @include mgc;
+        padding: $sz-10 4.1rem $sz-12 $sz-7;
+        border-radius: $br-1;
+        margin-bottom: $sz-7;
+        h3{
+            font-size: $fz-4;
+            margin-top: $sz-7;
+            margin-bottom: $sz-6;
+        }
+        p{
+            font-size: $fz-3;
+            font-weight: $fw-r;
+        }
+        &:nth-last-child(-n+1){
+            margin-bottom: 0;
+        }
+    }
+    .icon-box{
+        position: relative;
+        .box{
+            width: 8.6rem;
+            height: 8.6rem;
+            border-radius: 50%;
+        }
+        img{
+            position: absolute;
+            top: 50%;
+            left: 26%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+        }
+    }
+}
+.praise{
+    position: relative;
+    margin-bottom: $sz-13;
+    &::after{
+        content: "";
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat;
+        background-position: right;
+        width: 7.7rem;
+        height: 15.3rem;
+        position: absolute;
+        top: 4.3rem;
+        z-index: -1;
+    }
+    .swiper{
+        padding-top: 9.8rem;
+    }
+    .swiper-slide{
+        height: initial;
+        padding: $sz-12 $sz-4 $sz-4;
+        position: relative;
+        border-radius: $br-1;
+        margin-bottom: $sz-7;
+    }
+    .photo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8rem;
+        height: 8rem;
+        position: absolute;
+        top: -5rem;
+        left: $sz-11;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .w-100{
+        width: 100%;
+    }
+    p{
+        font-size: $fz-3;
+        font-weight: $fw-r;
+        text-align: justify;
+        padding-bottom: $sz-4;
+        border-bottom: 1px solid #DDDDDD;
+    }
+    .job{
+        @include fxc;
+        align-items: end;
+        h4{
+            font-size: $fz-3;
+            padding-top: $sz-4;
+            padding-bottom: $sz-1;
+        }
+        p{
+            padding-bottom: 0;
+            border-bottom:  none;
+        }
+    }
+    .start-list{
+        @include fxc;
+        width: 47.1947%;
+    }
+    .start-img{
+        img{
+            width: 1.7rem;
+        }
+    }
+    .swiper-pagination{
+        position: static;
+    }
+    .swiper-pagination-bullet-active{
+        width: 20px;
+        border-radius: 8px;
+        background-color: $yellow-color;
+    }
+}
+figure{
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg") no-repeat;
+    background-size: contain;
+    .txt{
+        padding-bottom: $sz-13;
+    }
+    h2{
+        font-size: $fz-6;
+        padding-top: 29.3rem;
+        padding-bottom: $sz-7;
+    }
+    button{
+        @include btn-b;
+    }
+}
+footer p{
+    font-size: $fz-3;
+    font-weight: $fw-r;
+    background-color: #F5F5F5;
+    padding: $sz-4 4.4rem;
+}
+@media screen and(min-width:768px) {
+    header{
+        &::before{
+            display: none;
+        }
+        &::after{
+            content: "";
+            background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg") no-repeat;
+            background-size: cover;
+            width: 85.1rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .nav{
+            .logo{
+                width: 20.0368%;
+            }
+        }
+        .banner{
+            @include fxc;
+            h3{
+                font-size: $fz-4;
+            }
+            h2{
+                font-size: $fz-9;
+            }
+            p{
+                font-size: $fz-5;
+            }
+            .pic{
+                &::after{
+                    display: none;
+                }
+                .home{
+                    width: 53.2rem;
+                    height: 53.4rem;
+                    top: 0;
+                }
+            }
+        }
+        .topscroll{
+            width: 7.1rem;
+            height: 7.1rem;
+            font-size: $fz-4;
+            bottom: 2.3rem;
+            right: $sz-12;
+        }
+    }
+    .link{
+        margin: $sz-15 0;
+        &::after{
+            width: 13.8rem;
+            height: 36rem;
+            top: calc(8rem - 36rem);
+        }
+        h2{
+            margin-bottom: $sz-12;
+        }
+        .link-card{
+            @include fxc;
+            flex-wrap: wrap;
+            padding: 0 6.5rem 0 5.4rem;
+            li{
+                padding: 0;
+            }
+        }
+        img{
+            width: 9rem;
+            margin-bottom: $sz-7;
+        }
+        .txt{
+            h3{
+                font-size: $fz-6;
+                margin-bottom: $sz-7;
+            }
+        }
+    }
+    .service{
+        margin-bottom: $sz-15;
+        &::after{
+            width: 21rem;
+            height: 31rem;
+            bottom: -36%;
+        }
+        .txt{
+            p{
+                margin-bottom: $sz-12;
+            }
+        }
+        .service-card{
+            @include fxc;
+            flex-wrap: wrap;
+            align-items: inherit;
+        }
+        li{
+            margin: 0;
+        }
+    }
+    .price{
+        margin-bottom: $sz-15;
+        .container{
+            @include fxc;
+            flex-direction: row-reverse;
+        }
+        .text-center{
+            text-align: start
+        }
+        .txt{
+            width: 40.808823%;
+            p{
+                padding-bottom: $sz-7;
+            }
+        }
+        .price-card{
+            @include fxc;
+            flex-wrap: wrap;
+            width: 46.599264%;
+        }
+        .pic{
+            margin-left: 0;
+            margin-right: 0;
+            h3{
+                margin-bottom: $sz-4;
+            }
+            &:nth-last-child(-n+2){
+                margin-bottom: 0;
+            }
+        }
+    }
+    .praise{
+        &::after{
+            width: 15.3rem;
+            height: 15rem;
+            top: 4.1rem;
+            left: 5rem;
+        }
+    }
+    figure{
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
+        background-size: contain;
+        .txt{
+            padding-bottom: $sz-15;
+        }
+        h2{
+            font-size: $fz-8;
+            padding-top: 26rem;
+            padding-bottom: $sz-12;
+        }
+    }
+}

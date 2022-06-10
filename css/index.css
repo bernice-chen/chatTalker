@@ -1,0 +1,741 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inherit;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  color: #221E1F;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 335px;
+  width: 89.333333%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1088px;
+    width: 79.648609%;
+    margin: 0 auto;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.h2-fz-m {
+  font-size: 2.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .h2-fz-m {
+    font-size: 3.2rem;
+  }
+}
+
+.p-fz-m {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .p-fz-m {
+    font-size: 1.8rem;
+  }
+}
+
+.b-shad {
+  -webkit-box-shadow: 0 2px 10px #00000014;
+          box-shadow: 0 2px 10px #00000014;
+  background-color: #fff;
+}
+
+.color-main {
+  color: #56C4C5;
+}
+
+.topscroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.4rem;
+  font-family: 'Wendy One', Regular;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #56C4C5;
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.page {
+  margin: 0 auto;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid #F5CA52;
+  position: absolute;
+  left: 0;
+  top: 7.2rem;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.6rem 0;
+}
+
+header .nav .logo {
+  width: 13.1rem;
+  cursor: pointer;
+}
+
+header .nav .btn-r {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.8rem 3.2rem;
+  border: none;
+  border-radius: 2.2rem;
+  background-color: #FF5D50;
+  cursor: pointer;
+}
+
+header .banner .txt {
+  margin: 3.2rem 0;
+}
+
+header .banner h3 {
+  font-size: 1.6rem;
+  color: #56C4C5;
+  margin-bottom: 0.8rem;
+}
+
+header .banner h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+header .banner p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+header .banner .pic::after {
+  content: "";
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg") no-repeat;
+  width: 33.4rem;
+  height: 24.5rem;
+  position: absolute;
+  bottom: 3.2rem;
+  background-size: cover;
+  z-index: -1;
+}
+
+header .banner .pic .home {
+  width: 90.746268%;
+  margin-left: 1.6rem;
+}
+
+header .topscroll {
+  bottom: 1.6rem;
+  right: 1.6rem;
+}
+
+.link {
+  margin: 6rem 0;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg") no-repeat;
+  background-size: cover;
+  background-position: right;
+  width: 4.9rem;
+  height: 12.6rem;
+  position: absolute;
+  top: 1.2rem;
+  z-index: -1;
+}
+
+.link h2 {
+  margin-bottom: 3.2rem;
+}
+
+.link .link-card li {
+  padding: 0 4.75rem;
+  margin-bottom: 2.4rem;
+}
+
+.link img {
+  width: 6rem;
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
+}
+
+.link .txt h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.link .txt p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #747474;
+}
+
+.service {
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.service::after {
+  content: "";
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg") no-repeat;
+  background-size: cover;
+  width: 8.8rem;
+  height: 13.5rem;
+  position: absolute;
+  right: 0;
+  bottom: -3.2rem;
+  z-index: -1;
+}
+
+.service .txt h2 {
+  margin-bottom: 1.6rem;
+}
+
+.service .txt p {
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+
+.service li {
+  width: 26rem;
+  margin: 0 auto;
+  border-radius: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.service li img {
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.service li h3 {
+  font-size: 1.6rem;
+  color: #56C4C5;
+  padding: 1.6rem 0;
+}
+
+.service li p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0 1.6rem 2.4rem;
+}
+
+.price {
+  margin-bottom: 6rem;
+}
+
+.price .txt {
+  margin-bottom: 3.2rem;
+}
+
+.price .txt p {
+  font-weight: 400;
+  padding: 1.6rem 0;
+}
+
+.price .txt button {
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1.5;
+  padding: 1.2rem 3.2rem;
+  border: none;
+  border-radius: 2.7rem;
+  background-color: #56C4C5;
+  cursor: pointer;
+}
+
+.price .pic {
+  width: 23rem;
+  margin: 0 auto;
+  padding: 3.2rem 4.1rem 4.8rem 2.4rem;
+  border-radius: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.price .pic h3 {
+  font-size: 1.8rem;
+  margin-top: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.price .pic p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.price .pic:nth-last-child(-n+1) {
+  margin-bottom: 0;
+}
+
+.price .icon-box {
+  position: relative;
+}
+
+.price .icon-box .box {
+  width: 8.6rem;
+  height: 8.6rem;
+  border-radius: 50%;
+}
+
+.price .icon-box img {
+  position: absolute;
+  top: 50%;
+  left: 26%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.praise {
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.praise::after {
+  content: "";
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat;
+  background-position: right;
+  width: 7.7rem;
+  height: 15.3rem;
+  position: absolute;
+  top: 4.3rem;
+  z-index: -1;
+}
+
+.praise .swiper {
+  padding-top: 9.8rem;
+}
+
+.praise .swiper-slide {
+  height: initial;
+  padding: 4.8rem 1.6rem 1.6rem;
+  position: relative;
+  border-radius: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.praise .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: -5rem;
+  left: 3.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.praise .w-100 {
+  width: 100%;
+}
+
+.praise p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: justify;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.praise .job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.praise .job h4 {
+  font-size: 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 0.8rem;
+}
+
+.praise .job p {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.praise .start-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 47.1947%;
+}
+
+.praise .start-img img {
+  width: 1.7rem;
+}
+
+.praise .swiper-pagination {
+  position: static;
+}
+
+.praise .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 8px;
+  background-color: #F5CA52;
+}
+
+figure {
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg") no-repeat;
+  background-size: contain;
+}
+
+figure .txt {
+  padding-bottom: 6rem;
+}
+
+figure h2 {
+  font-size: 2.4rem;
+  padding-top: 29.3rem;
+  padding-bottom: 2.4rem;
+}
+
+figure button {
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1.5;
+  padding: 1.2rem 3.2rem;
+  border: none;
+  border-radius: 2.7rem;
+  background-color: #56C4C5;
+  cursor: pointer;
+}
+
+footer p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #F5F5F5;
+  padding: 1.6rem 4.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  header::before {
+    display: none;
+  }
+  header::after {
+    content: "";
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg") no-repeat;
+    background-size: cover;
+    width: 85.1rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  header .nav .logo {
+    width: 20.0368%;
+  }
+  header .banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .banner h3 {
+    font-size: 1.8rem;
+  }
+  header .banner h2 {
+    font-size: 4.8rem;
+  }
+  header .banner p {
+    font-size: 2rem;
+  }
+  header .banner .pic::after {
+    display: none;
+  }
+  header .banner .pic .home {
+    width: 53.2rem;
+    height: 53.4rem;
+    top: 0;
+  }
+  header .topscroll {
+    width: 7.1rem;
+    height: 7.1rem;
+    font-size: 1.8rem;
+    bottom: 2.3rem;
+    right: 4.8rem;
+  }
+  .link {
+    margin: 10rem 0;
+  }
+  .link::after {
+    width: 13.8rem;
+    height: 36rem;
+    top: calc(8rem - 36rem);
+  }
+  .link h2 {
+    margin-bottom: 4.8rem;
+  }
+  .link .link-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 6.5rem 0 5.4rem;
+  }
+  .link .link-card li {
+    padding: 0;
+  }
+  .link img {
+    width: 9rem;
+    margin-bottom: 2.4rem;
+  }
+  .link .txt h3 {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .service {
+    margin-bottom: 10rem;
+  }
+  .service::after {
+    width: 21rem;
+    height: 31rem;
+    bottom: -36%;
+  }
+  .service .txt p {
+    margin-bottom: 4.8rem;
+  }
+  .service .service-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+            align-items: inherit;
+  }
+  .service li {
+    margin: 0;
+  }
+  .price {
+    margin-bottom: 10rem;
+  }
+  .price .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .price .text-center {
+    text-align: start;
+  }
+  .price .txt {
+    width: 40.808823%;
+  }
+  .price .txt p {
+    padding-bottom: 2.4rem;
+  }
+  .price .price-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 46.599264%;
+  }
+  .price .pic {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .price .pic h3 {
+    margin-bottom: 1.6rem;
+  }
+  .price .pic:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+  .praise::after {
+    width: 15.3rem;
+    height: 15rem;
+    top: 4.1rem;
+    left: 5rem;
+  }
+  figure {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/home_footer.svg") no-repeat;
+    background-size: contain;
+  }
+  figure .txt {
+    padding-bottom: 10rem;
+  }
+  figure h2 {
+    font-size: 3.2rem;
+    padding-top: 26rem;
+    padding-bottom: 4.8rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */

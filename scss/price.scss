@@ -1,0 +1,320 @@
+//var
+@import "reset";
+@import "var";
+
+// mixin
+@import "mixin";
+
+//base
+@import "base";
+.page{
+    margin: 0 auto;
+}
+header{
+    height: 100vh;
+    position: relative;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg")no-repeat;
+    background-size: contain;
+    background-position: 0 $sz-14;
+    &::before{
+        content: "";
+        width: 100%;
+        border-bottom: 2px solid $yellow-color;
+        position: absolute;
+        left: 0;
+        top: $sz-14;
+    }
+    &::after{
+        content: "";
+        background-color: #F7F9FD;
+        width: 100%;
+        height: 74.101796%;
+        position: absolute;
+        top: $sz-14;
+        border-bottom-left-radius: 15rem;
+        z-index: -1;
+    }
+    .nav{
+        @include fxc;
+        padding: $sz-4 0;
+        .logo{
+            width: 13.1rem;
+            cursor: pointer;
+        }
+        .btn-r{
+            @include btn-r();
+        }
+    }
+    .banner{
+        .txt{
+            margin-top: $sz-12;
+        }
+        h2{
+            font-size: $fz-8;
+            margin-bottom: $sz-4;
+        }
+        p{
+            font-size: $fz-3;
+            font-weight: $fw-r;
+        }
+    }
+    .topscroll{
+        bottom: 1.9rem;
+        right: $sz-4;
+    }
+}
+.price{
+    position: relative;
+    margin-bottom: $sz-13;
+    &::after{
+        content: "";
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg") no-repeat;
+        background-size: cover;
+        background-position: right;
+        width: 9.6rem;
+        height: 20.4rem;
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+    }
+    h2{
+        margin-bottom: $sz-7;
+    }
+    .btn-price{
+        @include fxc;
+        overflow-x: auto;
+        padding-left: $sz-6;
+        margin-bottom: $sz-10;
+        button{
+            @include btn-border-md-b;
+            margin-right: 0.6rem;
+            &:hover{
+                color: $white-color;
+                background-color: $main-color;
+            }
+        }
+        span{
+            font-family: $fzs-1;
+        }
+    }
+    .price-card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .txt-basic{
+        border-radius: $br-1;
+        margin-bottom: $sz-7;
+    }
+    .txt-normal{
+        border-radius: $br-1;
+    }
+    h3{
+        font-size: $fz-6;
+        padding: $sz-4;
+        border-bottom: 1px solid #DDDDDD;
+    }
+    h4{
+        font-size: $fz-3;
+        font-weight: $fw-r;
+        padding: $sz-7 $sz-4;
+    }
+    .btn-block{
+        @include fxc;
+        margin: 0 $sz-4 $sz-8;
+        p{
+            width: 13.9rem;
+            font-size: $fz-1;
+            font-weight: $fw-r;
+            padding: $sz-4 0;
+            border-radius: $br-1;
+            background-color: #F5F5F5;
+        }
+        span{
+            font-family: 'Comfortaa', cursive;
+            font-size: $fz-7;
+        }
+        sub{
+            font-size: $fz-1;
+            font-weight: $fw-b;
+            margin-left: 0.4rem;
+        }
+        .equal{
+            font-size: $fz-6;
+        }
+    }
+    .txt{
+        font-size: $fz-2;
+        font-weight: $fw-r;
+        margin: 0 $sz-4;
+        position: relative;
+        li{
+            margin: 0 0 $sz-4 $sz-10;
+            &:last-of-type{
+                margin-bottom: $sz-11;
+            }
+            &::before{
+                content: "";
+                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg") no-repeat;
+                background-size: cover;
+                width: $sz-4;
+                height: 1.4rem;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    .btn-experience{
+        @include btn-b;
+        margin-left: calc(100% - 70.447761% );
+        margin-bottom: $sz-7;
+    }
+}
+.question{
+    margin-bottom: $sz-13;
+    h2{
+        margin-bottom: $sz-10;
+    }
+    li{
+        font-size: $fz-3;
+        font-weight: $fw-r;
+        padding: $sz-4;
+        border-radius: $br-1;
+        margin-bottom: $sz-4;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    .question-title{
+        @include fxc;
+        font-size: $fz-3;
+        font-weight: $fw-r;
+    }
+    .question-btn{
+        position: relative;
+    }
+    .minus-icon{
+        margin-bottom: 0.2rem;
+    }
+    .minus-icon{
+        display: none;
+    }
+    .question-text{
+        color: $gray-color;
+        margin-top: $sz-4;
+        margin-bottom: $sz-1;
+    }
+    .question-text{
+        display: none;
+    }
+    .show-text{
+        .question-text{
+            display: block;
+        }
+        .minus-icon{
+            display: inline;
+        }
+        .plus-icon{
+            display: none;
+        }
+        .title-color{
+            color: $main-color;
+        }
+    }
+}
+footer p{
+    font-size: $fz-3;
+    font-weight: $fw-r;
+    background-color: #F5F5F5;
+    padding: $sz-4 4.4rem;
+}
+@media screen and(min-width:768px) {
+    header{
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg") no-repeat;
+        background-position: top right;
+        &::before{
+            display: none;
+        }
+        &::after{
+            height: 61.118335%;
+            border-bottom-left-radius: 30rem;
+            top: 0;
+        }
+        .nav{
+            .logo{
+                width: 20.0368%;
+            }
+        }
+        .banner{
+            .txt{
+                margin-top: 9.2rem;
+            }
+            h2{
+                font-size: $fz-9;
+            }
+        }
+        .topscroll{
+            width: 7.1rem;
+            height: 7.1rem;
+            font-size: $fz-4;
+            bottom: $sz-9;
+            right: 5.7rem;
+        }
+    }
+    .price{
+        margin-top: -19.9rem;
+        &::after{
+            width: 9.4rem;
+            height: 36.1rem;
+            top: 40%;
+        }
+        h2{
+            margin-bottom: $sz-12;
+        }
+        .btn-price{
+            max-width: 108.8rem;
+            width: 79.648609%;
+            padding: 0 17.35rem 0 17.85rem;
+            margin: 0 auto $sz-12;
+            button{
+                @include btn-border-lg-b;
+                margin-right: $sz-4;
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+        }
+        .price-card{
+            @include fxc;
+            align-items: start;
+            padding: 0 8.95rem;
+        }
+        .btn-block{
+            margin: 0 $sz-7 $sz-10;
+            p{
+                width: 16.9rem;
+                padding: $sz-7 0;
+            }
+            span{
+                font-size: $fz-8;
+            }
+            sub{
+                margin-left: $sz-1;
+            }
+            .equal{
+                font-size: 2.9rem;
+                margin: 0 1.45rem;
+            }
+        }
+        .txt{
+            font-size: $fz-3;
+            margin: 0 $sz-7;
+        }
+        .btn-experience{
+            margin-left: calc(100% - 65.315315%);
+        }
+    }
+    .question{
+        margin-bottom: $sz-15;
+    }
+}
